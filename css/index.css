@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body {
+    background:#fefefe;
+    color:#101112;
+    font-family:Roboto, Courier, monospace;
+    text-align:center;
+}
+
+h1 {
+    color:#66fcf1;
+    font-weight: bolder;
+    height:80px;
+    background:#004b4e;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:0px;
+    
+}
+
+#About{
+    min-height:150px;
+    padding: 30px;
+    margin-top:10px;
+
+    .about-sect{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    img {
+        padding: 5px;
+    }
+} 
+
+h2 {
+    color:#46a29f;
+    padding:0px;
+    text-align:start;
+    font-weight: bold;
+
+}
+
+p {
+    text-align: start;
+    width: 75%;
+    
+}
+
+
+#Experience {
+    min-height:250px;
+    padding-left:30px;
+    
+}
+
+ul li{
+    list-style: none;
+    text-align:start;
+    
+}
+
+#Connect {
+    background:#003120;
+    margin-bottom: 0px;
+    margin-top:auto;
+    min-height:170px;
+    padding:10px;
+    
+    h2 {
+        text-align: center;
+        color:#fefefe;
+    }
+
+    ul li {
+        text-align:center;
+        padding:5px;
+    }
+
+    a{
+        color:#964834;
+        text-decoration: none;
+        
+    }
+}
