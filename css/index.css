@@ -59,6 +59,7 @@ nav {
   padding: 20px;
 }
 nav a {
+    color: orangered;
   align-self: flex-end;
   padding: 8px;
   text-decoration: none;
