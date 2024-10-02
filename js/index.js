@@ -90,3 +90,30 @@ const messageSection = document.querySelector('#messages');
 if (messageSection.querySelector('ul').children.length === 0) {
 messageSection.style.display = 'none';
 }
+
+// Fetch GitHub Repositories
+fetch('https://api.github.com/users/StealthyScripter/repos')
+    .then(response => response.json())  // Convert response to JSON
+    .then(repositories => {
+        console.log(repositories);  // Log the repositories to see the data structure
+
+        // Select the projects section and project list
+        const projectSection = document.querySelector('#Projects');
+        const projectList = projectSection.querySelector('ul');
+
+        // Iterate over repositories and create a list item for each project
+        repositories.forEach(repo => {
+            const project = document.createElement('li');
+            project.innerText = repo.name;  // Set the inner text to the repository name
+            projectList.appendChild(project);  // Append the project to the list
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching repositories:', error);
+
+        // Handle errors by displaying a message in the projects section
+        const projectSection = document.querySelector('#Projects');
+        const errorMessage = document.createElement('p');
+        errorMessage.innerText = 'Error fetching projects. Please try again later.';
+        projectSection.appendChild(errorMessage);
+    });
