@@ -47,4 +47,46 @@ messageForm.addEventListener('submit', function(event) {
     console.log('Message: ', userMessage);
 
     const messageSection = document.querySelector('#messages');
-})
+    const messageList = messageSection.querySelector('ul');
+
+    // Create new message element
+    const newMessage = document.createElement('li');
+    newMessage.innerHTML = `
+        <a href="mailto:${userEmail}">${userName}</a>: 
+        <span>${userMessage}</span>
+    `;
+
+    // Create remove button
+    const removeButton = document.createElement('button');
+    removeButton.innerText = 'remove';
+    removeButton.type = 'button';
+    
+    // Add event listener to remove the message
+    removeButton.addEventListener('click', function() {
+        const entry = removeButton.parentNode;
+        entry.remove();
+
+        // Hide messages section if the list is empty
+        if (messageList.children.length === 0) {
+            messageSection.style.display = 'none';
+        }
+});
+
+// Append the remove button to the message
+newMessage.appendChild(removeButton);
+
+// Append the new message to the message list
+messageList.appendChild(newMessage);
+
+// Make the message section visible
+messageSection.style.display = 'block';
+
+// Clear the form fields
+messageForm.reset();
+});
+
+// Hide the messages section initially if there are no messages
+const messageSection = document.querySelector('#messages');
+if (messageSection.querySelector('ul').children.length === 0) {
+messageSection.style.display = 'none';
+}
