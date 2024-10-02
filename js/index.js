@@ -8,7 +8,7 @@ let today = new Date();
 let thisYear = today.getFullYear();
 
 //get the footer using query selector
-const footer = document.querySelector('footer')
+const footer = document.querySelector('#copyright')
 
 // create an element
 const copyright = document.createElement('p');
@@ -26,12 +26,25 @@ let mySkills = ["Javascript", "python", "c++", "C", "react", "angular" , "Tensor
 const Skills = document.getElementById('Skills')
 const skillsList = Skills.querySelector('ul');
 
-for (let i = 0; i < mySkills.length; i++) {
+mySkills.forEach(skillName => {
     const skill = document.createElement('li');
+    skill.innerText = skillName;
+    skillsList.appendChild(skill);
+});
+
+const messageForm = document.forms['leave-message'];
+
+messageForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 
 
-    skill.innerText = mySkills[i];
+    const userName = event.target.usersName.value;
+    const userEmail = event.target.usersEmail.value;
+    const userMessage = event.target.usersMessage.value;
 
-    skillsList.appendChild(skill)
-}
+    console.log('Name: ', userName);
+    console.log('Email: ', userEmail);
+    console.log('Message: ', userMessage);
 
+    const messageSection = document.querySelector('#messages');
+})

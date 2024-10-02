@@ -76,36 +76,56 @@
     
     <section id="Skills">
         <h2>Skills</h2>
-        <ul>
-            <li></li>
-        </ul>
+        <ul></ul>
     </section>
     <section id="Projects">
         <h2>Projects</h2>
     </section>
-    <section id="Connect">
-        <h2>Connect</h2>                 
-        <ul class="connectSection">
-            <li><a href="https://github.com/StealthyScripter">
-                <img src=assets/github.svg alt="github logo"/>
-                </a>
-            </li>
-            <li><a href="mailto:koringo.w.brian@gmail.com">
-                <img src=assets/email.png alt="email logo"/>
-                </a>
-            </li>
-            <li><a href="https://www.linkedin.com/in/brian-k-wendot/">
-                <img src=./assets/linkedin.png alt="Linkedin logo"/>
-                </a>
-            </li>
-            <li><a href="https://www.linkedin.com/in/brian-k-wendot/">
-                <img src=./assets/x.png alt="x logo"/>
-                </a>
-            </li>
+    <footer class="footer">
+        <section id="usersMessage">
+            <h2>Leave a message</h2>
+            <form>
+                <label for="usersName">Full Name:</label>
+                <input name="usersName" id="usersName" type="text" placeholder="Joe Doe" required >
+                    <br>
+                <label for="usersEmail">Email Address:</label>
+                <input type="email" name="usersEmail" id="usersEmail" placeholder="joedoe@gmail.com" required>
+                    <br>
+                <label for="usersMessage">Message</label>
+                <textarea id="usersMessage" placeholder="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul>
 
-        </ul>
-    <footer></footer>
-    </section>
+            </ul>
+        </section>
+        <section id="Connect">
+            <h2>Connect</h2>                 
+            <ul class="connectSection">
+                <li><a href="https://github.com/StealthyScripter">
+                    <img src=assets/github.svg alt="github logo"/>
+                    </a>
+                </li>
+                <li><a href="mailto:koringo.w.brian@gmail.com">
+                    <img src=assets/email.png alt="email logo"/>
+                    </a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/brian-k-wendot/">
+                    <img src=./assets/linkedin.png alt="Linkedin logo"/>
+                    </a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/brian-k-wendot/">
+                    <img src=./assets/x.png alt="x logo"/>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+        <section id="copyright"></section>
+    </footer>
     <script src='js/index.js'></script>
 </body>
 </html>
