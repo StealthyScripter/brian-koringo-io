@@ -117,3 +117,10 @@ fetch('https://api.github.com/users/StealthyScripter/repos')
         errorMessage.innerText = 'Error fetching projects. Please try again later.';
         projectSection.appendChild(errorMessage);
     });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuBar = document.querySelector('.menuBar');
+
+    menuToggle.addEventListener('click', function() {
+        menuBar.classList.toggle('active');
+    });

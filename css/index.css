@@ -42,6 +42,23 @@ ul li {
   text-align: start;
 }
 
+.menu-toggle {
+  margin-left: 20px;
+  color: orangered;
+  font-size:small;
+  padding: 5px;
+  border: 1px solid whitesmoke;
+  border-radius: 2px;
+  display:none;
+
+}
+
+.menu-toggle:hover {
+  color: #333;
+  background: #fefefe ;
+
+}
+
 .menuBar {
   display: flex;
   padding-right: 30px;
@@ -65,23 +82,43 @@ nav a {
   text-decoration: none;
 }
 
+
 @media screen and (max-width: 699px) {
   nav {
-    display: block;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin: 0px;
+  } 
+  
+  .menu-toggle {
+    display: inline-block;
   }
 
   .menuBar {
+    display:none;
     text-decoration: none;
-    display: block;
-    padding-right: 0;
+    text-align: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .menuBar.active {
+      display: block; 
   }
 
-  nav a {
+  .menuBar a {
     display: block;
     text-align: center;
+    padding: 15px 0;
+    color: #fff;
+    background-color: #333;
+  }
+
+  
+
+  .menuBar a:hover {
+      background-color: darkred;
   }
 }
 
